@@ -23,16 +23,16 @@ public:
 		return result;
 	}
 };
-int main(void)
-{
-	vector<int> result;
-	Solution a;
-	result = a.countBits(2);
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	vector<int> result;
+//	Solution a;
+//	result = a.countBits(2);
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}

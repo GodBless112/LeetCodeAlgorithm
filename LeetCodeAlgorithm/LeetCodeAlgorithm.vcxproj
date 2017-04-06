@@ -151,9 +151,11 @@
     <ClCompile Include="..\SourceCode\3-LongestSubstringWithoutRepeatingCharacters.cpp" />
     <ClCompile Include="..\SourceCode\338-CountingBit.cpp" />
     <ClCompile Include="..\SourceCode\4-findMedianSortedArrays.cpp" />
-    <ClCompile Include="1-TwoSum.cpp" />
-    <ClCompile Include="2-Add Two Numbers.cpp" />
-    <ClCompile Include="3-LongestSubstringWithoutRepeatingCharacters.cpp" />
+    <ClCompile Include="..\SourceCode\6-ZigZagConversion.cpp" />
+    <ClCompile Include="..\SourceCode\7-ReverseInteger.cpp" />
+    <ClCompile Include="..\SourceCode\8-StringtoInteger(atoi).cpp" />
+    <ClCompile Include="..\SourceCode\9-PalindromeNumber.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,4 +1,4 @@
-﻿///长除法动态规划求大整数余数
+﻿//二分法的查找，给出一个通用的寻找第K大元素的函数，调用两次得到结果
 
 #include<iostream>
 #include<fstream>
@@ -115,22 +115,22 @@ int GetMinSubTree(int K, int data1, int data2, int data3)
 	}
 	return result;
 }
-int main(int argc, char* argv[])
-{
-	cout << CountRemainder("XXXXXXXXXXXXXXXXXX", 5) << endl;
-	cout << "Done.\n";
-	vector<int> a = { 2};
-	vector<int> b = {};
-	Solution test;
-	cout << GetMinSubTree(4, 15, 11, 10);
-	cout << test.findMedianSortedArrays(a, b);
-	//auto b= test.twoSum(a, 6);
-	// code to keep window open for MSVC++
-	std::cin.clear();
-	while (std::cin.get() != '\n')
-		continue;
-	std::cin.get();
-	return 0;
-}
+//int main(int argc, char* argv[])
+//{
+//	cout << CountRemainder("XXXXXXXXXXXXXXXXXX", 5) << endl;
+//	cout << "Done.\n";
+//	vector<int> a = { 2};
+//	vector<int> b = {};
+//	Solution test;
+//	cout << GetMinSubTree(4, 15, 11, 10);
+//	cout << test.findMedianSortedArrays(a, b);
+//	//auto b= test.twoSum(a, 6);
+//	// code to keep window open for MSVC++
+//	std::cin.clear();
+//	while (std::cin.get() != '\n')
+//		continue;
+//	std::cin.get();
+//	return 0;
+//}
 
 

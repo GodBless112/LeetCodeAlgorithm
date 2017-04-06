@@ -1,6 +1,8 @@
 // static.cpp -- using a static local variable
 #include <iostream>
 #include<vector>
+#include<algorithm>
+#include<unordered_map>
 // constants
 // function prototype
 using namespace std;
@@ -128,18 +130,18 @@ public:
 		return result;
 	}
 };
-int main(void)
-{
-	vector<int> nums = { 3, 2, 4, -3, 12, 0, 9, 7, 1, 4, 5 };
-	vector<int> result;
-	Solution a;
-	result = a.twoSum(nums,10);
-	int b=result.size();
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	vector<int> nums = { 3, 2, 4, -3, 12, 0, 9, 7, 1, 4, 5 };
+//	vector<int> result;
+//	Solution a;
+//	result = a.twoSum(nums,10);
+//	int b=result.size();
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}
