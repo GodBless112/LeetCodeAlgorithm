@@ -147,6 +147,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\SourceCode\1-TwoSum.cpp" />
+    <ClCompile Include="..\SourceCode\10-RegularExpressionMatching.cpp" />
+    <ClCompile Include="..\SourceCode\11-ContainerWithMostWater.cpp" />
+    <ClCompile Include="..\SourceCode\12-IntegertoRoman.cpp" />
+    <ClCompile Include="..\SourceCode\13-RomantoInteger.cpp" />
     <ClCompile Include="..\SourceCode\2-Add Two Numbers.cpp" />
     <ClCompile Include="..\SourceCode\3-LongestSubstringWithoutRepeatingCharacters.cpp" />
     <ClCompile Include="..\SourceCode\338-CountingBit.cpp" />

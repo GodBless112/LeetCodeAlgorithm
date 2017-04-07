@@ -70,15 +70,15 @@ public:
 		return ret;
 	}
 };
-int main(void)
-{
-	Solution2 test;
-	cout << test.romanToInt("MCMXCVI") << endl;
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution2 test;
+//	cout << test.romanToInt("MCMXCVI") << endl;
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}
