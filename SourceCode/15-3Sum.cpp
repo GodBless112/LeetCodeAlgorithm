@@ -92,17 +92,17 @@ public:
 		return result;
 	}
 };
-int main(void)
-{
-	Solution test;
-	vector<int> a({ -1,0,1,2,-1,-4 });
-	auto x=test.threeSum(a);
-	
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution test;
+//	vector<int> a({ -1,0,1,2,-1,-4 });
+//	auto x=test.threeSum(a);
+//	
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}
