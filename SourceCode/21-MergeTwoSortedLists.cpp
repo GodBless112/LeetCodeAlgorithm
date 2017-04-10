@@ -67,35 +67,35 @@ public:
 		else { l2->next = mergeTwoLists(l2->next, l1); return l2; }
 	}
 };
-int main(void)
-{
-	Solution2 test;
-	ListNode *p1=new ListNode(1);
-	ListNode *cur = p1;
-	for (int i = 0; i < 4; i++)
-	{
-		cur->next = new ListNode(i + 2);
-		cur = cur->next;
-	}
-	ListNode *p2 = new ListNode(1);
-	cur = p2;
-	for (int i = 0; i < 4; i++)
-	{
-		cur->next = new ListNode(i + 2);
-		cur = cur->next;
-	}
-	auto x=test.mergeTwoLists(p1, p2);
-	while (x)
-	{
-		cout << x->val;
-		x = x->next;
-	}
-		
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution2 test;
+//	ListNode *p1=new ListNode(1);
+//	ListNode *cur = p1;
+//	for (int i = 0; i < 4; i++)
+//	{
+//		cur->next = new ListNode(i + 2);
+//		cur = cur->next;
+//	}
+//	ListNode *p2 = new ListNode(1);
+//	cur = p2;
+//	for (int i = 0; i < 4; i++)
+//	{
+//		cur->next = new ListNode(i + 2);
+//		cur = cur->next;
+//	}
+//	auto x=test.mergeTwoLists(p1, p2);
+//	while (x)
+//	{
+//		cout << x->val;
+//		x = x->next;
+//	}
+//		
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}

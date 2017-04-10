@@ -14,22 +14,27 @@
 // constants
 // function prototype
 using namespace std;
-//先排序，然后左右夹逼，O(n3)
-class Solution 
+//先排序，然后左右夹逼，O(n3),加入一个判断，邻接的4个数如果不满足要求则后面的也不可能满足
+class Solution
 {
 public:
-	vector<vector<int>> fourSum(vector<int>& nums, int target) 
+	vector<vector<int>> fourSum(vector<int>& nums, int target)
 	{
 		vector<vector<int>> result;
 		if (nums.size() < 4)
 			return result;
 		sort(nums.begin(), nums.end());
-		for (int i = 0; i < nums.size() - 3; i++)
+		const int n = nums.size();
+		for (int i = 0; i < n - 3; i++)
 		{
-			for (int j = i + 1; j < nums.size() - 2; j++)
+			if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target) break;
+			if (nums[i] + nums[n - 1] + nums[n - 2] + nums[n - 3] < target) continue;
+			for (int j = i + 1; j < n - 2; j++)
 			{
+				if (nums[i] + nums[j] + nums[j + 1] + nums[i + 2] > target) break;
+				if (nums[i] + nums[j] + nums[n - 1] + nums[n - 2] < target) continue;
 				int k = j + 1;
-				int l = nums.size() - 1;
+				int l = n - 1;
 				while (k < l)
 				{
 					int sum = nums[i] + nums[j] + nums[k] + nums[l];
@@ -37,8 +42,8 @@ public:
 					{
 						result.push_back({ nums[i],nums[j],nums[k],nums[l] });
 						k++; l--;
-						while (nums[k] == nums[k - 1]) k++;
-						while (nums[l] == nums[l + 1]) l--;
+						while (nums[k] == nums[k - 1] && k < l) k++;
+						while (nums[l] == nums[l + 1] && k<l) l--;
 					}
 					else if (sum < target)
 					{
@@ -166,12 +171,46 @@ public:
 		return result;
 	}
 };
+//方法5
+class Solution5 {
+public:
+	vector<vector<int>> fourSum(vector<int>& nums, int target) {
+		vector<vector<int>> total;
+		int n = nums.size();
+		if (n<4)  return total;
+		sort(nums.begin(), nums.end());
+		for (int i = 0; i<n - 3; i++)
+		{
+			if (i>0 && nums[i] == nums[i - 1]) continue;
+			if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3]>target) break;
+			if (nums[i] + nums[n - 3] + nums[n - 2] + nums[n - 1]<target) continue;
+			for (int j = i + 1; j<n - 2; j++)
+			{
+				if (j>i + 1 && nums[j] == nums[j - 1]) continue;
+				if (nums[i] + nums[j] + nums[j + 1] + nums[j + 2]>target) break;
+				if (nums[i] + nums[j] + nums[n - 2] + nums[n - 1]<target) continue;
+				int left = j + 1, right = n - 1;
+				while (left<right) {
+					int sum = nums[left] + nums[right] + nums[i] + nums[j];
+					if (sum<target) left++;
+					else if (sum>target) right--;
+					else {
+						total.push_back(vector<int>{nums[i], nums[j], nums[left], nums[right]});
+						do { left++; } while (nums[left] == nums[left - 1] && left<right);
+						do { right--; } while (nums[right] == nums[right + 1] && left<right);
+					}
+				}
+			}
+		}
+		return total;
+	}
+};
 //int main(void)
 //{
 //	Solution4 test;
 //	vector<int> a({ 1,1,1,1,2,2,2,2 });
 //	auto x = test.fourSum(a, 4);
-//	
+//
 //	// code to keep window open for MSVC++
 //	cin.clear();
 //	while (cin.get() != '\n')
