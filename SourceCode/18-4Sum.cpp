@@ -166,17 +166,17 @@ public:
 		return result;
 	}
 };
-int main(void)
-{
-	Solution4 test;
-	vector<int> a({ 1,1,1,1,2,2,2,2 });
-	auto x = test.fourSum(a, 4);
-	
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution4 test;
+//	vector<int> a({ 1,1,1,1,2,2,2,2 });
+//	auto x = test.fourSum(a, 4);
+//	
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}

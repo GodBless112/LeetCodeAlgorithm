@@ -102,6 +102,9 @@
     <ClCompile Include="..\SourceCode\13-RomantoInteger.cpp" />
     <ClCompile Include="..\SourceCode\14-LongestCommonPrefix.cpp" />
     <ClCompile Include="..\SourceCode\15-3Sum.cpp" />
+    <ClCompile Include="..\SourceCode\16-3SumClosest.cpp" />
+    <ClCompile Include="..\SourceCode\17-LetterCombinationsofaPhoneNumber.cpp" />
+    <ClCompile Include="..\SourceCode\18-4Sum.cpp" />
     <ClCompile Include="..\SourceCode\2-Add Two Numbers.cpp" />
     <ClCompile Include="..\SourceCode\3-LongestSubstringWithoutRepeatingCharacters.cpp" />
     <ClCompile Include="..\SourceCode\338-CountingBit.cpp" />
