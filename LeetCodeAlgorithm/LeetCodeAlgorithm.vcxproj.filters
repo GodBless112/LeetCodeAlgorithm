@@ -84,5 +84,11 @@
     <ClCompile Include="..\SourceCode\21-MergeTwoSortedLists.cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="..\SourceCode\26-RemoveDuplicatesfromSortedArray.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\27-RemoveElement.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

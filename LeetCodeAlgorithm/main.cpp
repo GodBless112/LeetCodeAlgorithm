@@ -1,7 +1,8 @@
-//	21. Merge Two Sorted Lists
+//	28. Implement strStr()
 //------------------------------------------------------------------------------//
-//	Merge two sorted linked lists and return it as a new list. The new list		//
-//	should be made by splicing together the nodes of the first two lists.		//
+//	Implement strStr().
+//	Returns the index of the first occurrence of needle in haystack, or -1 if	//
+//	needle is not part of haystack.												//
 //------------------------------------------------------------------------------//
 #include <iostream>
 #include<vector>
@@ -12,85 +13,33 @@
 // constants
 // function prototype
 using namespace std;
-/**
-* Definition for singly-linked list.
-* struct ListNode {
-*     int val;
-*     ListNode *next;
-*     ListNode(int x) : val(x), next(NULL) {}
-* };
-*/
-struct ListNode {
-	int val;
-	ListNode *next;
-	ListNode(int x) : val(x), next(NULL) {}
-};
+//暴力匹配，时间O(m*n)，空间O(1)
 class Solution 
 {
 public:
-	ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) 
+	int strStr(string haystack, string needle) 
 	{
-		if (l1 == nullptr) return l2;
-		if (l2 == nullptr) return l1;
-		ListNode dummy(-1);
-		ListNode *p = &dummy;
-		while (l1&&l2)
+		const int m = haystack.size();
+		const int n = needle.size();
+		if (n == 0)
+			return 0;
+		for (int i = 0; i < m - n + 1; i++)
 		{
-			if (l1->val < l2->val)
-			{
-				p->next = l1;
-				l1 = l1->next;
-			}
-			else
-			{
-				p->next = l2;
-				l2 = l2->next;
-			}			
-			p = p->next;		
+			int j;
+			for (j = 0; j < n; j++)
+				if (haystack[i + j] != needle[j])
+					break;
+			if (j == n)
+				return i;
 		}
-		if (l1)
-			p->next = l1;
-		if (l2)
-			p->next = l2;
-		return dummy.next;
-	}
-};
-//迭代形式
-class Solution2 
-{
-public:
-	ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) 
-	{
-		if (!l1) return l2;
-		if (!l2) return l1;
-		if (l1->val < l2->val) { l1->next = mergeTwoLists(l1->next, l2); return l1; }
-		else { l2->next = mergeTwoLists(l2->next, l1); return l2; }
+		return -1;
 	}
 };
 int main(void)
 {
-	Solution2 test;
-	ListNode *p1=new ListNode(1);
-	ListNode *cur = p1;
-	for (int i = 0; i < 4; i++)
-	{
-		cur->next = new ListNode(i + 2);
-		cur = cur->next;
-	}
-	ListNode *p2 = new ListNode(1);
-	cur = p2;
-	for (int i = 0; i < 4; i++)
-	{
-		cur->next = new ListNode(i + 2);
-		cur = cur->next;
-	}
-	auto x=test.mergeTwoLists(p1, p2);
-	while (x)
-	{
-		cout << x->val;
-		x = x->next;
-	}
-		
+	Solution test;
+	string a("abcd"), b("bcd");
+	cout << test.strStr(a,b) << endl;
 	// code to keep window open for MSVC++
 	cin.clear();
 	while (cin.get() != '\n')

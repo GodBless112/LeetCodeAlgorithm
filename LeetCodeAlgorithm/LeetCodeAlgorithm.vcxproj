@@ -108,6 +108,8 @@
     <ClCompile Include="..\SourceCode\19-RemoveNthNodeFromEndofList.cpp" />
     <ClCompile Include="..\SourceCode\2-Add Two Numbers.cpp" />
     <ClCompile Include="..\SourceCode\21-MergeTwoSortedLists.cpp" />
+    <ClCompile Include="..\SourceCode\26-RemoveDuplicatesfromSortedArray.cpp" />
+    <ClCompile Include="..\SourceCode\27-RemoveElement.cpp" />
     <ClCompile Include="..\SourceCode\3-LongestSubstringWithoutRepeatingCharacters.cpp" />
     <ClCompile Include="..\SourceCode\338-CountingBit.cpp" />
     <ClCompile Include="..\SourceCode\4-findMedianSortedArrays.cpp" />
