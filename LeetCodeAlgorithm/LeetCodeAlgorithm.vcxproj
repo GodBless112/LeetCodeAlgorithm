@@ -107,10 +107,13 @@
     <ClCompile Include="..\SourceCode\18-4Sum.cpp" />
     <ClCompile Include="..\SourceCode\19-RemoveNthNodeFromEndofList.cpp" />
     <ClCompile Include="..\SourceCode\2-Add Two Numbers.cpp" />
+    <ClCompile Include="..\SourceCode\20-ValidParentheses.cpp" />
     <ClCompile Include="..\SourceCode\21-MergeTwoSortedLists.cpp" />
     <ClCompile Include="..\SourceCode\26-RemoveDuplicatesfromSortedArray.cpp" />
     <ClCompile Include="..\SourceCode\27-RemoveElement.cpp" />
+    <ClCompile Include="..\SourceCode\28-Implement strStr().cpp" />
     <ClCompile Include="..\SourceCode\3-LongestSubstringWithoutRepeatingCharacters.cpp" />
+    <ClCompile Include="..\SourceCode\314-BinaryTreeVerticalOrderTraversal（二叉树垂直遍历）.cpp" />
     <ClCompile Include="..\SourceCode\338-CountingBit.cpp" />
     <ClCompile Include="..\SourceCode\4-findMedianSortedArrays.cpp" />
     <ClCompile Include="..\SourceCode\5-Longest Palindromic Substring.cpp" />

@@ -78,17 +78,17 @@ public:
 		return paren.empty();
 	}
 };
-int main(void)
-{
-	Solution test;
-	string s("({[[]]})()");
-	cout << boolalpha << test.isValid(s) << endl;
-		
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution test;
+//	string s("({[[]]})()");
+//	cout << boolalpha << test.isValid(s) << endl;
+//		
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}

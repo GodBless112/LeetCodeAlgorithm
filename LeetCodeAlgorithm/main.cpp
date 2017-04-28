@@ -1,8 +1,7 @@
-//	28. Implement strStr()
+﻿//	22. Generate Parentheses
 //------------------------------------------------------------------------------//
-//	Implement strStr().
-//	Returns the index of the first occurrence of needle in haystack, or -1 if	//
-//	needle is not part of haystack.												//
+//	Given n pairs of parentheses, write a function to generate all combinations //
+//	of well-formed parentheses.													//
 //------------------------------------------------------------------------------//
 #include <iostream>
 #include<vector>
@@ -10,36 +9,82 @@
 #include<cctype>
 #include<algorithm>
 #include<stack>
+#include<list>
 // constants
 // function prototype
 using namespace std;
-//����ƥ�䣬ʱ��O(m*n)���ռ�O(1)
+//递归
 class Solution 
 {
 public:
-	int strStr(string haystack, string needle) 
+	vector<string> generateParenthesis(int n) 
 	{
-		const int m = haystack.size();
-		const int n = needle.size();
-		if (n == 0)
-			return 0;
-		for (int i = 0; i < m - n + 1; i++)
+		vector<string> result;
+		DFS("", n, 0, 0, 0, result);
+		return result;
+	}
+private:
+	void DFS(string s, int n, int deep, int pre, int use, vector<string> &result)
+	{
+		if (deep == 2 * n)
 		{
-			int j;
-			for (j = 0; j < n; j++)
-				if (haystack[i + j] != needle[j])
-					break;
-			if (j == n)
-				return i;
+			result.push_back(s);
+			return;
 		}
-		return -1;
+		if (pre == 0 && use != n)
+		{
+			s += '(';
+			deep++;
+			use++;
+			pre++;
+		}
+		if (use == n)
+		{
+			for (int i = 0; i < pre; i++)
+				s += ')';
+			result.push_back(s);
+			return;
+		}
+		else
+		{
+			DFS(s + '(', n, deep + 1, pre + 1, use + 1, result);
+			DFS(s + ')', n, deep + 1, pre - 1, use, result);
+		}
+	}
+};
+//也是递归，只是更加简洁
+class Solution2
+{
+public:
+	vector<string> generateParenthesis(int n) {
+		vector<string> result;
+		string path;
+		if (n > 0) generate(n, path, result, 0, 0);
+		return result;
+	}
+	// l表示“(”的个数,r表示“）”的个数
+	void generate(int n, string& path, vector<string> &result, int l, int r) {
+		if (l == n) {
+			string s(path);
+			result.push_back(s.append(n - r, ')'));
+			return;
+		}
+		path.push_back('(');
+		generate(n, path, result, l + 1, r);
+		path.pop_back();
+		if (l > r) {
+			path.push_back(')');
+			generate(n, path, result, l, r + 1);
+			path.pop_back();
+		}
 	}
 };
 int main(void)
 {
 	Solution test;
-	string a("abcd"), b("bcd");
-	cout << test.strStr(a,b) << endl;
+	auto x=test.generateParenthesis(3);
+	for (auto y : x)
+		cout << y << endl;
 	// code to keep window open for MSVC++
 	cin.clear();
 	while (cin.get() != '\n')

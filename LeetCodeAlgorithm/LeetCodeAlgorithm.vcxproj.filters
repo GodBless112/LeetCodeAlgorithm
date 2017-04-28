@@ -90,5 +90,14 @@
     <ClCompile Include="..\SourceCode\27-RemoveElement.cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="..\SourceCode\314-BinaryTreeVerticalOrderTraversal（二叉树垂直遍历）.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\20-ValidParentheses.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\28-Implement strStr().cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
