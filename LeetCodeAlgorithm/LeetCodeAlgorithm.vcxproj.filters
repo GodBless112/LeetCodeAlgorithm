@@ -99,5 +99,11 @@
     <ClCompile Include="..\SourceCode\28-Implement strStr().cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="..\SourceCode\24-Swap Nodes in Pairs.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\22-Generate Parentheses.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

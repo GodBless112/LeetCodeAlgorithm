@@ -1,7 +1,7 @@
-﻿//	22. Generate Parentheses
+﻿//	29. Divide Two Integers
 //------------------------------------------------------------------------------//
-//	Given n pairs of parentheses, write a function to generate all combinations //
-//	of well-formed parentheses.													//
+//	Divide two integers without using multiplication, division and mod operator.//
+//	If it is overflow, return MAX_INT.											//
 //------------------------------------------------------------------------------//
 #include <iostream>
 #include<vector>
@@ -13,78 +13,31 @@
 // constants
 // function prototype
 using namespace std;
-//递归
-class Solution 
-{
+
+class Solution {
 public:
-	vector<string> generateParenthesis(int n) 
-	{
-		vector<string> result;
-		DFS("", n, 0, 0, 0, result);
-		return result;
-	}
-private:
-	void DFS(string s, int n, int deep, int pre, int use, vector<string> &result)
-	{
-		if (deep == 2 * n)
-		{
-			result.push_back(s);
-			return;
+	int divide(int dividend, int divisor) {
+		// 􁒂 dividend = INT_MIN 􁬥􅖌-dividend 􀑉􂏑􀜩􅖌􁝯􀐔􂩗 long long
+		long long a = dividend >= 0 ? dividend : -(long long)dividend;
+		long long b = divisor >= 0 ? divisor : -(long long)divisor;
+		// 􁒂 dividend = INT_MIN 􁬥􅖌divisor = -1 􁬥􅖌􃐂􁳋􀑉􂏑􀜩􅖌􁝯􀐔􂩗 long long
+		long long result = 0;
+		while (a >= b) {
+			long long c = b;
+			for (int i = 0; a >= c; ++i, c <<= 1) {
+				a -= c;
+				result += 1 << i;
+			}
 		}
-		if (pre == 0 && use != n)
-		{
-			s += '(';
-			deep++;
-			use++;
-			pre++;
-		}
-		if (use == n)
-		{
-			for (int i = 0; i < pre; i++)
-				s += ')';
-			result.push_back(s);
-			return;
-		}
-		else
-		{
-			DFS(s + '(', n, deep + 1, pre + 1, use + 1, result);
-			DFS(s + ')', n, deep + 1, pre - 1, use, result);
-		}
+		return ((dividend^divisor) >> 31) ? (-result) : (result);
 	}
 };
-//也是递归，只是更加简洁
-class Solution2
-{
-public:
-	vector<string> generateParenthesis(int n) {
-		vector<string> result;
-		string path;
-		if (n > 0) generate(n, path, result, 0, 0);
-		return result;
-	}
-	// l表示“(”的个数,r表示“）”的个数
-	void generate(int n, string& path, vector<string> &result, int l, int r) {
-		if (l == n) {
-			string s(path);
-			result.push_back(s.append(n - r, ')'));
-			return;
-		}
-		path.push_back('(');
-		generate(n, path, result, l + 1, r);
-		path.pop_back();
-		if (l > r) {
-			path.push_back(')');
-			generate(n, path, result, l, r + 1);
-			path.pop_back();
-		}
-	}
-};
+
 int main(void)
 {
 	Solution test;
-	auto x=test.generateParenthesis(3);
-	for (auto y : x)
-		cout << y << endl;
+	auto x=test.divide(8,3);
+	cout << x;
 	// code to keep window open for MSVC++
 	cin.clear();
 	while (cin.get() != '\n')

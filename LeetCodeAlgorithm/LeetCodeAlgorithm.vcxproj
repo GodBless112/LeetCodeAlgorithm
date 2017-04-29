@@ -109,6 +109,8 @@
     <ClCompile Include="..\SourceCode\2-Add Two Numbers.cpp" />
     <ClCompile Include="..\SourceCode\20-ValidParentheses.cpp" />
     <ClCompile Include="..\SourceCode\21-MergeTwoSortedLists.cpp" />
+    <ClCompile Include="..\SourceCode\22-Generate Parentheses.cpp" />
+    <ClCompile Include="..\SourceCode\24-Swap Nodes in Pairs.cpp" />
     <ClCompile Include="..\SourceCode\26-RemoveDuplicatesfromSortedArray.cpp" />
     <ClCompile Include="..\SourceCode\27-RemoveElement.cpp" />
     <ClCompile Include="..\SourceCode\28-Implement strStr().cpp" />
