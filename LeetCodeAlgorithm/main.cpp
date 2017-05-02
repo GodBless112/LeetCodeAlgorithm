@@ -1,43 +1,71 @@
-﻿//	29. Divide Two Integers
+﻿//	36. Valid Sudoku
 //------------------------------------------------------------------------------//
-//	Divide two integers without using multiplication, division and mod operator.//
-//	If it is overflow, return MAX_INT.											//
+//	Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.	//
+//	The Sudoku board could be partially filled, where empty cells are filled	//
+//	with the character '.'.														//
 //------------------------------------------------------------------------------//
 #include <iostream>
 #include<vector>
 #include<string>
 #include<cctype>
 #include<algorithm>
-#include<stack>
+#include<unordered_set>
 #include<list>
+#include<functional>
 // constants
 // function prototype
 using namespace std;
-
-class Solution {
+class Solution 
+{
 public:
-	int divide(int dividend, int divisor) {
-		// 􁒂 dividend = INT_MIN 􁬥􅖌-dividend 􀑉􂏑􀜩􅖌􁝯􀐔􂩗 long long
-		long long a = dividend >= 0 ? dividend : -(long long)dividend;
-		long long b = divisor >= 0 ? divisor : -(long long)divisor;
-		// 􁒂 dividend = INT_MIN 􁬥􅖌divisor = -1 􁬥􅖌􃐂􁳋􀑉􂏑􀜩􅖌􁝯􀐔􂩗 long long
-		long long result = 0;
-		while (a >= b) {
-			long long c = b;
-			for (int i = 0; a >= c; ++i, c <<= 1) {
-				a -= c;
-				result += 1 << i;
+	bool isValidSudoku(vector<vector<char>>& board) 
+	{
+		unordered_set<char> sudoku;	
+		for (int i = 0; i < 9; i++)
+		{
+			//check every row
+			for (int j = 0; j < 9; j++)
+			{
+				if (sudoku.find(board[i][j]) == sudoku.end())
+					sudoku.insert(board[i][j]);
+				else
+					return false;
 			}
+			sudoku.clear();
+			//check every column
+			for (int j = 0; j < 9; j++)
+			{
+				if (sudoku.find(board[j][i]) == sudoku.end())
+					sudoku.insert(board[j][i]);
+				else
+					return false;
+			}
+			sudoku.clear();
+			//check every subboxes
+			int row = (i / 3) * 3;
+			int col = (i % 3) * 3;
+			for (int m = row; m < row + 3; row++)
+			{
+				for (int n = col; n < col + 3; n++)
+				{
+					if (sudoku.find(board[m][n]) == sudoku.end())
+						sudoku.insert(board[m][n]);
+					else
+						return false;
+				}
+			}
+			sudoku.clear();
 		}
-		return ((dividend^divisor) >> 31) ? (-result) : (result);
+		return true;
 	}
 };
-
 int main(void)
 {
 	Solution test;
-	auto x=test.divide(8,3);
+	vector<int> a({ 1,2});
+	
 	cout << x;
+
 	// code to keep window open for MSVC++
 	cin.clear();
 	while (cin.get() != '\n')

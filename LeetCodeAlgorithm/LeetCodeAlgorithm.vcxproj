@@ -114,9 +114,14 @@
     <ClCompile Include="..\SourceCode\26-RemoveDuplicatesfromSortedArray.cpp" />
     <ClCompile Include="..\SourceCode\27-RemoveElement.cpp" />
     <ClCompile Include="..\SourceCode\28-Implement strStr().cpp" />
+    <ClCompile Include="..\SourceCode\29-Divide Two Integers.cpp" />
     <ClCompile Include="..\SourceCode\3-LongestSubstringWithoutRepeatingCharacters.cpp" />
+    <ClCompile Include="..\SourceCode\31-Next Permutation.cpp" />
     <ClCompile Include="..\SourceCode\314-BinaryTreeVerticalOrderTraversal（二叉树垂直遍历）.cpp" />
+    <ClCompile Include="..\SourceCode\33-Search in Rotated Sorted Array.cpp" />
     <ClCompile Include="..\SourceCode\338-CountingBit.cpp" />
+    <ClCompile Include="..\SourceCode\34-Search for a Range.cpp" />
+    <ClCompile Include="..\SourceCode\35-Search Insert Position.cpp" />
     <ClCompile Include="..\SourceCode\4-findMedianSortedArrays.cpp" />
     <ClCompile Include="..\SourceCode\5-Longest Palindromic Substring.cpp" />
     <ClCompile Include="..\SourceCode\6-ZigZagConversion.cpp" />
