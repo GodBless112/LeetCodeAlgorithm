@@ -64,15 +64,15 @@ public:
 		return ss.str();
 	}
 };
-int main(void)
-{
-	Solution2 test;
-	cout << test.countAndSay(5) << endl;
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution2 test;
+//	cout << test.countAndSay(5) << endl;
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}

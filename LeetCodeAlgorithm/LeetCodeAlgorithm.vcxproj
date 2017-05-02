@@ -122,6 +122,9 @@
     <ClCompile Include="..\SourceCode\338-CountingBit.cpp" />
     <ClCompile Include="..\SourceCode\34-Search for a Range.cpp" />
     <ClCompile Include="..\SourceCode\35-Search Insert Position.cpp" />
+    <ClCompile Include="..\SourceCode\36-Valid Sudoku.cpp" />
+    <ClCompile Include="..\SourceCode\37-Sudoku Solver.cpp" />
+    <ClCompile Include="..\SourceCode\38-Count and Say.cpp" />
     <ClCompile Include="..\SourceCode\4-findMedianSortedArrays.cpp" />
     <ClCompile Include="..\SourceCode\5-Longest Palindromic Substring.cpp" />
     <ClCompile Include="..\SourceCode\6-ZigZagConversion.cpp" />
