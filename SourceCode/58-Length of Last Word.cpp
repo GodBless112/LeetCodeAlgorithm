@@ -66,17 +66,17 @@ private:
 		return len;
 	}
 };
-int main(void)
-{
-	Solution3 test;
-	string a = " hello wor ";
-	cout << test.lengthOfLastWord(a) << endl;
-	
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution3 test;
+//	string a = " hello wor ";
+//	cout << test.lengthOfLastWord(a) << endl;
+//	
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}
