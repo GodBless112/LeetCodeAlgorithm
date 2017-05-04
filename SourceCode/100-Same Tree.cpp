@@ -58,24 +58,24 @@ public:
 		return true;
 	}
 };
-int main(void)
-{
-	Solution test;
-	TreeNode *a, *b;
-	a = new TreeNode(1);
-	a->left = new TreeNode(2);
-	b = new TreeNode(1);
-	b->right = new TreeNode(2);
-	cout << boolalpha << test.isSameTree(a, b);
-	delete a->left; delete a;
-	delete b->right; delete b;
-	cout << endl;
-	
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution test;
+//	TreeNode *a, *b;
+//	a = new TreeNode(1);
+//	a->left = new TreeNode(2);
+//	b = new TreeNode(1);
+//	b->right = new TreeNode(2);
+//	cout << boolalpha << test.isSameTree(a, b);
+//	delete a->left; delete a;
+//	delete b->right; delete b;
+//	cout << endl;
+//	
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}

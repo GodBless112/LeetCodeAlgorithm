@@ -97,6 +97,7 @@
   <ItemGroup>
     <ClCompile Include="..\SourceCode\1-TwoSum.cpp" />
     <ClCompile Include="..\SourceCode\10-RegularExpressionMatching.cpp" />
+    <ClCompile Include="..\SourceCode\100-Same Tree.cpp" />
     <ClCompile Include="..\SourceCode\11-ContainerWithMostWater.cpp" />
     <ClCompile Include="..\SourceCode\12-IntegertoRoman.cpp" />
     <ClCompile Include="..\SourceCode\13-RomantoInteger.cpp" />
@@ -136,10 +137,19 @@
     <ClCompile Include="..\SourceCode\5-Longest Palindromic Substring.cpp" />
     <ClCompile Include="..\SourceCode\50-Pow(x, n).cpp" />
     <ClCompile Include="..\SourceCode\53-Maximum Subarray.cpp" />
+    <ClCompile Include="..\SourceCode\54-Spiral Matrix.cpp" />
+    <ClCompile Include="..\SourceCode\55-Jump Game.cpp" />
+    <ClCompile Include="..\SourceCode\56-Merge Intervals.cpp" />
+    <ClCompile Include="..\SourceCode\57-Insert Interval.cpp" />
     <ClCompile Include="..\SourceCode\58-Length of Last Word.cpp" />
     <ClCompile Include="..\SourceCode\6-ZigZagConversion.cpp" />
+    <ClCompile Include="..\SourceCode\66-Plus One.cpp" />
+    <ClCompile Include="..\SourceCode\67-Add Binary.cpp" />
     <ClCompile Include="..\SourceCode\7-ReverseInteger.cpp" />
+    <ClCompile Include="..\SourceCode\70-Climbing Stairs.cpp" />
     <ClCompile Include="..\SourceCode\8-StringtoInteger(atoi).cpp" />
+    <ClCompile Include="..\SourceCode\83-Remove Duplicates from Sorted List.cpp" />
+    <ClCompile Include="..\SourceCode\88-Merge Sorted Array.cpp" />
     <ClCompile Include="..\SourceCode\9-PalindromeNumber.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
