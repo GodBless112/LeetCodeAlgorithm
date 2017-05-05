@@ -142,9 +142,14 @@
     <ClCompile Include="..\SourceCode\56-Merge Intervals.cpp" />
     <ClCompile Include="..\SourceCode\57-Insert Interval.cpp" />
     <ClCompile Include="..\SourceCode\58-Length of Last Word.cpp" />
+    <ClCompile Include="..\SourceCode\59-Spiral Matrix II.cpp" />
     <ClCompile Include="..\SourceCode\6-ZigZagConversion.cpp" />
+    <ClCompile Include="..\SourceCode\60-Permutation Sequence.cpp" />
+    <ClCompile Include="..\SourceCode\61-Rotate List.cpp" />
+    <ClCompile Include="..\SourceCode\62-Unique Paths.cpp" />
     <ClCompile Include="..\SourceCode\66-Plus One.cpp" />
     <ClCompile Include="..\SourceCode\67-Add Binary.cpp" />
+    <ClCompile Include="..\SourceCode\69-Sqrt(x).cpp" />
     <ClCompile Include="..\SourceCode\7-ReverseInteger.cpp" />
     <ClCompile Include="..\SourceCode\70-Climbing Stairs.cpp" />
     <ClCompile Include="..\SourceCode\8-StringtoInteger(atoi).cpp" />

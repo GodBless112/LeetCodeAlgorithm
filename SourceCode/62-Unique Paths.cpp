@@ -1,18 +1,13 @@
-﻿//	63. Unique Paths II
+﻿//	62. Unique Paths
 //------------------------------------------------------------------------------//
-//	Follow up for "Unique Paths":												//
-//	Now consider if some obstacles are added to the grids.How many unique paths //
-//	would there be ?															//
-//	An obstacle and empty space is marked as 1 and 0 respectively in the grid.	//
-//	For example,																//
-//	There is one obstacle in the middle of a 3x3 grid as illustrated below.		//
-//	[																			//
-//		[0, 0, 0],																//
-//		[0, 1, 0],																//
-//		[0, 0, 0]																//
-//	]																			//
-//	The total number of unique paths is 2.										//
-//	Note: m and n will be at most 100.											//
+//	A robot is located at the top-left corner of a m x n grid (marked 'Start'	//
+//	in the diagram below).														//
+//	The robot can only move either down or right at any point in time.The robot //
+//	is trying to reach the bottom - right corner of the grid(marked 'Finish' in //
+//	the diagram below).															//
+//	How many possible unique paths are there ?									//
+//	Above is a 3 x 7 grid.How many possible unique paths are there ?			//
+//	Note : m and n will be at most 100.											//
 //------------------------------------------------------------------------------//
 #include <iostream>
 #include<vector>
@@ -23,31 +18,36 @@
 // constants
 // function prototype
 using namespace std;
-//dynamic programming，
-
-//动态规划的优化，不需要一个二维数组来存结果，甚至可以不用vector,时间复杂度O(n^2)
-//加入障碍的判断
-class Solution
+//dynamic programming，时间复杂度O(n^2)
+class Solution 
 {
 public:
-	int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid)
+	int uniquePaths(int m, int n) 
 	{
-		int m = obstacleGrid.size();
-		int n = obstacleGrid[0].size();
-		if (obstacleGrid[0][0] || obstacleGrid[m - 1][n - 1])
-			return 0;
+		vector<vector<int>> grid(m, vector<int>(n));
+		//initial
+		int i, j;
+		for (i = 0; i < m; ++i)
+			grid[i][0] = 1;
+		for (j = 0; j < n; ++j)
+			grid[0][j] = 1;
+		for (i = 1; i < m; i++)
+			for (j = 1; j < n; j++)
+				grid[i][j] = grid[i - 1][j] + grid[i][j - 1];
+		return grid[m - 1][n - 1];
+	}
+};
+//动态规划的优化，不需要一个二维数组来存结果，甚至可以不用vector
+class Solution2
+{
+public:
+	int uniquePaths(int m, int n)
+	{
 		int grid[101] = {0};	//m,n<=100
-		grid[0] = obstacleGrid[0][0] == 1 ? 0 : 1;
+		grid[0] = 1;
 		for (int i = 0; i < m; i++)
-		{
-			grid[0] = grid[0] == 0 ? 0 : (obstacleGrid[i][0] ? 0 : 1);
 			for (int j = 1; j < n; j++)
-			{
-				grid[j] = obstacleGrid[i][j] == 1 ? 0 : (grid[j] + grid[j - 1]);
-			}
-		}
-			
-				
+				grid[j] += grid[j - 1];
 		return grid[n - 1];
 	}
 };
@@ -103,18 +103,17 @@ public:
 		return (int)res;
 	}
 };
-int main(void)
-{
-	Solution test;
-	vector<vector<int>> a = { {0},{1},{0} };
-	cout << test.uniquePathsWithObstacles(a);
-	cout << endl;
-	
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution4 test;
+//	cout << test.uniquePaths(3, 7);
+//	cout << endl;
+//	
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}

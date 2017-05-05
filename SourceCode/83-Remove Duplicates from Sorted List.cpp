@@ -100,26 +100,26 @@ public:
 		return head;
 	}
 };
-int main(void)
-{
-	Solution2 test;
-	ListNode *p = new ListNode(1);
-	p->next = new ListNode(1);
-	p->next->next = new ListNode(3);
-	ListNode *q = test.deleteDuplicates(p);
-	while(q)
-	{
-		cout << q->val << " ";
-		q = q->next;
-	}
-	delete p->next->next; delete p->next; delete p;
-	cout << endl;
-	
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution2 test;
+//	ListNode *p = new ListNode(1);
+//	p->next = new ListNode(1);
+//	p->next->next = new ListNode(3);
+//	ListNode *q = test.deleteDuplicates(p);
+//	while(q)
+//	{
+//		cout << q->val << " ";
+//		q = q->next;
+//	}
+//	delete p->next->next; delete p->next; delete p;
+//	cout << endl;
+//	
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}
