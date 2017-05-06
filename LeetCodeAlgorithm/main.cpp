@@ -64,10 +64,21 @@ public:
 		return ss.str();
 	}
 };
+double myPow(double x, int n) 
+{
+	if (n == 0)
+		return 1.0;
+	if (n < 0)
+		return myPow(1.0 / x, -n);
+	if (n & 0x01)
+		return x*myPow(x*x, n / 2);
+	else
+		return myPow(x*x, n / 2);
+}
 int main(void)
 {
 	Solution2 test;
-	cout << test.countAndSay(5) << endl;
+	cout << myPow(1.5, INT_MIN) << endl << pow(1.5, INT_MIN) << endl;
 	// code to keep window open for MSVC++
 	cin.clear();
 	while (cin.get() != '\n')
