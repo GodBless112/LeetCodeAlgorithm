@@ -97,6 +97,7 @@
   <ItemGroup>
     <ClCompile Include="..\SourceCode\1-TwoSum.cpp" />
     <ClCompile Include="..\SourceCode\10-RegularExpressionMatching.cpp" />
+    <ClCompile Include="..\SourceCode\100-Same Tree.cpp" />
     <ClCompile Include="..\SourceCode\11-ContainerWithMostWater.cpp" />
     <ClCompile Include="..\SourceCode\12-IntegertoRoman.cpp" />
     <ClCompile Include="..\SourceCode\13-RomantoInteger.cpp" />
@@ -125,11 +126,35 @@
     <ClCompile Include="..\SourceCode\36-Valid Sudoku.cpp" />
     <ClCompile Include="..\SourceCode\37-Sudoku Solver.cpp" />
     <ClCompile Include="..\SourceCode\38-Count and Say.cpp" />
+    <ClCompile Include="..\SourceCode\39-Combination Sum.cpp" />
     <ClCompile Include="..\SourceCode\4-findMedianSortedArrays.cpp" />
+    <ClCompile Include="..\SourceCode\40-Combination Sum II.cpp" />
+    <ClCompile Include="..\SourceCode\43-Multiply Strings.cpp" />
+    <ClCompile Include="..\SourceCode\46-Permutations.cpp" />
+    <ClCompile Include="..\SourceCode\47-Permutations II.cpp" />
+    <ClCompile Include="..\SourceCode\48-Rotate Image.cpp" />
+    <ClCompile Include="..\SourceCode\49-Group Anagrams.cpp" />
     <ClCompile Include="..\SourceCode\5-Longest Palindromic Substring.cpp" />
+    <ClCompile Include="..\SourceCode\50-Pow(x, n).cpp" />
+    <ClCompile Include="..\SourceCode\53-Maximum Subarray.cpp" />
+    <ClCompile Include="..\SourceCode\54-Spiral Matrix.cpp" />
+    <ClCompile Include="..\SourceCode\55-Jump Game.cpp" />
+    <ClCompile Include="..\SourceCode\56-Merge Intervals.cpp" />
+    <ClCompile Include="..\SourceCode\57-Insert Interval.cpp" />
+    <ClCompile Include="..\SourceCode\58-Length of Last Word.cpp" />
+    <ClCompile Include="..\SourceCode\59-Spiral Matrix II.cpp" />
     <ClCompile Include="..\SourceCode\6-ZigZagConversion.cpp" />
+    <ClCompile Include="..\SourceCode\60-Permutation Sequence.cpp" />
+    <ClCompile Include="..\SourceCode\61-Rotate List.cpp" />
+    <ClCompile Include="..\SourceCode\62-Unique Paths.cpp" />
+    <ClCompile Include="..\SourceCode\66-Plus One.cpp" />
+    <ClCompile Include="..\SourceCode\67-Add Binary.cpp" />
+    <ClCompile Include="..\SourceCode\69-Sqrt(x).cpp" />
     <ClCompile Include="..\SourceCode\7-ReverseInteger.cpp" />
+    <ClCompile Include="..\SourceCode\70-Climbing Stairs.cpp" />
     <ClCompile Include="..\SourceCode\8-StringtoInteger(atoi).cpp" />
+    <ClCompile Include="..\SourceCode\83-Remove Duplicates from Sorted List.cpp" />
+    <ClCompile Include="..\SourceCode\88-Merge Sorted Array.cpp" />
     <ClCompile Include="..\SourceCode\9-PalindromeNumber.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
