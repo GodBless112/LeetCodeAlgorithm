@@ -241,6 +241,29 @@ private:
 		return T;
 	}
 };
+//中心展开法
+class Solution6 {
+public:
+	std::string longestPalindrome(std::string s) {
+		if (s.empty() || 1 == s.size())
+			return s;
+		int i, a, b, mark, sz = s.size();
+		int maxlen = 1;
+		for (i = 0; i < sz && 2 * (sz - i) > maxlen;)
+		{
+			a = b = i;
+			for (; b + 1 < sz && s[b] == s[b + 1]; ++b);
+			i = b + 1; //the key step, rather than ++i, i could skip duplicate characters.
+			for (; a > 0 && b + 1 < sz && s[a - 1] == s[b + 1]; --a, ++b);
+			if (b - a + 1 > maxlen)
+			{
+				mark = a;
+				maxlen = b - a + 1;
+			}
+		}
+		return s.substr(mark, maxlen);
+	}
+};
 //int main()
 //{
 //	Solution5 test;

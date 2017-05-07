@@ -20,6 +20,7 @@
 #include<algorithm>
 #include<functional>
 #include<stack>
+#include<stdio.h>
 // constants
 // function prototype
 using namespace std;
@@ -109,7 +110,10 @@ int main(void)
 	vector<vector<int>> a = { {0},{1},{0} };
 	cout << test.uniquePathsWithObstacles(a);
 	cout << endl;
-	
+	double x;
+	char s[11];
+	gets_s(s);
+	putchar()
 	// code to keep window open for MSVC++
 	cin.clear();
 	while (cin.get() != '\n')
