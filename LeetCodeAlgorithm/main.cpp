@@ -1,119 +1,204 @@
-﻿//	63. Unique Paths II
+﻿//	94. Binary Tree Inorder Traversal
 //------------------------------------------------------------------------------//
-//	Follow up for "Unique Paths":												//
-//	Now consider if some obstacles are added to the grids.How many unique paths //
-//	would there be ?															//
-//	An obstacle and empty space is marked as 1 and 0 respectively in the grid.	//
-//	For example,																//
-//	There is one obstacle in the middle of a 3x3 grid as illustrated below.		//
-//	[																			//
-//		[0, 0, 0],																//
-//		[0, 1, 0],																//
-//		[0, 0, 0]																//
-//	]																			//
-//	The total number of unique paths is 2.										//
-//	Note: m and n will be at most 100.											//
+//	Given a binary tree, return the inorder traversal of its nodes' values.		//
+//	For example :																//
+//	Given binary tree[1, null, 2, 3],											//
+//	1																			//
+//	 \																			//
+//	  2																			//
+//	 /																			//
+//	3																			//
+//	return[1, 3, 2].															//
+//	Note: Recursive solution is trivial, could you do it iteratively?			//
 //------------------------------------------------------------------------------//
 #include <iostream>
 #include<vector>
 #include<string>
+#include<numeric>
 #include<algorithm>
 #include<functional>
 #include<stack>
-#include<stdio.h>
+#include<unordered_map>
 // constants
 // function prototype
 using namespace std;
-//dynamic programming，
 
-//动态规划的优化，不需要一个二维数组来存结果，甚至可以不用vector,时间复杂度O(n^2)
-//加入障碍的判断
-class Solution
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+//递归的方法，占用O(n)的栈空间
+class Solution 
 {
 public:
-	int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid)
+	vector<int> inorderTraversal(TreeNode* root) 
 	{
-		int m = obstacleGrid.size();
-		int n = obstacleGrid[0].size();
-		if (obstacleGrid[0][0] || obstacleGrid[m - 1][n - 1])
-			return 0;
-		int grid[101] = {0};	//m,n<=100
-		grid[0] = obstacleGrid[0][0] == 1 ? 0 : 1;
-		for (int i = 0; i < m; i++)
-		{
-			grid[0] = grid[0] == 0 ? 0 : (obstacleGrid[i][0] ? 0 : 1);
-			for (int j = 1; j < n; j++)
-			{
-				grid[j] = obstacleGrid[i][j] == 1 ? 0 : (grid[j] + grid[j - 1]);
-			}
-		}
-			
-				
-		return grid[n - 1];
+		vector<int> result;
+		inorderTranversal(root, result);
+		return result;
+	}
+private:
+	void inorderTranversal(TreeNode *root, vector<int> &result)
+	{
+		if (root == nullptr)
+			return;
+		inorderTranversal(root->left, result);
+		result.push_back(root->val);
+		inorderTranversal(root->right, result);
 	}
 };
-//深度优先搜索，时间复杂度O(n^4)，会超时
+//迭代的方法，利用一个stack，但会破坏树的结构，不实用
+class Solution2
+{
+public:
+	vector<int> inorderTraversal(TreeNode* root)
+	{
+		vector<int> result;
+		if (root == nullptr)
+			return result;
+		stack<TreeNode *> stack;
+		stack.push(root);
+		while (!stack.empty())
+		{
+			TreeNode *cur = stack.top();
+			if (cur->left)
+			{
+				stack.push(cur->left);
+				cur->left = nullptr;
+			}
+			else
+			{
+				result.push_back(cur->val);
+				stack.pop();
+				if (cur->right)
+					stack.push(cur->right);
+			}
+		}
+		return result;
+	}
+};
+//利用一个stack和一个hashtable，不会破坏树结构
 class Solution3
 {
 public:
-	int uniquePaths(int m, int n) 
+	vector<int> inorderTraversal(TreeNode* root)
 	{
-		if (m < 1 || n < 1) return 0;
-		if (m == 1 && n == 1) return 1; 
-		return uniquePaths(m - 1, n) + uniquePaths(m, n - 1);
+		vector<int> vector;
+		if (!root)
+			return vector;
+		unordered_map<TreeNode *, bool> map;//left child has been visited:true.
+		stack<TreeNode *> stack;
+		stack.push(root);
+		while (!stack.empty())
+		{
+			TreeNode *pNode = stack.top();
+			if (pNode->left && !map[pNode])
+			{
+				stack.push(pNode->left);
+				map[pNode] = true;
+			}
+			else
+			{
+				vector.push_back(pNode->val);
+				stack.pop();
+				if (pNode->right)
+					stack.push(pNode->right);
+			}
+		}
+		return vector;
 	}
 };
-//备忘录法，深度优先搜索加缓存,时间复杂度O(n^2),空间复杂度O(n^2)
+//只用stack，不会破坏树结构，对使用栈来说是最佳的
 class Solution4
 {
 public:
-	int uniquePaths(int m, int n) 
+	vector<int> inorderTraversal(TreeNode* root)
 	{
-		f = vector<vector<int> >(m, vector<int>(n, 0));
-		f[0][0] = 1;
-		return dfs(m - 1, n - 1);
-	}
-private:
-	vector<vector<int> > f; 
-	int dfs(int x, int y) 
-	{
-		if (x < 0 || y < 0) return 0; 
-		if (x == 0 && y == 0) return f[0][0]; 
-		if (f[x][y] > 0) 
+		vector<int> result;
+		stack<TreeNode*> stack;
+		TreeNode *cur = root;
+		while (!stack.empty() || cur != nullptr)
 		{
-			return f[x][y];
+			if (cur != nullptr)
+			{
+				stack.push(cur);
+				cur = cur->left;
+			}
+			else
+			{
+				cur = stack.top();
+				result.push_back(cur->val);
+				stack.pop();
+				cur = cur->right;
+			}
 		}
-		else 
-		{
-			return f[x][y] = dfs(x - 1, y) + dfs(x, y - 1);
-		}
+		return result;
 	}
 };
-//数学公式，Cm+n-2 m-1，即从起点到终点总共要走m+n-2步，从中选择m-1步向下
+//Morris中序遍历，空间复杂度O(1)
+//步骤：
+//1. 如果当前节点的左孩子为空，则输出当前节点并将其右孩子作为当前节点。
+//2. 如果当前节点的左孩子不为空，在当前节点的左子树中找到当前节点在中序遍历下的前驱节点。
+//	a) 如果前驱节点的右孩子为空，将它的右孩子设置为当前节点。当前节点更新为当前节点的左孩子。
+//	b) 如果前驱节点的右孩子为当前节点，将它的右孩子重新设为空（恢复树的形状）。输出当前节点。当前节点更新为当前节点的右孩子。
+//3. 重复以上1、2直到当前节点为空。
 class Solution5
 {
 public:
-	int uniquePaths(int m, int n) 
+	vector<int> inorderTraversal(TreeNode* root)
 	{
-		if (m <= 0 || n <= 0) return 0;
-		long long res = 1;
-		for (int i = n; i < m + n - 1; i++) 
+		vector<int> result;
+		TreeNode *cur = root, *prev = nullptr;	//当前节点和前驱节点
+		while (cur)
 		{
-			res = res * i / (i - n + 1);
+			if (cur->left == nullptr)
+			{
+				result.push_back(cur->val);
+				cur = cur->right;
+				prev = cur;
+			}
+			else
+			{
+				TreeNode *node = cur->left;
+				while (node->right != nullptr && node->right != cur)
+					node = node->right;
+				if (node->right == nullptr) { 
+					node->right = cur;
+					cur = cur->left;
+				}
+				else {
+					result.push_back(cur->val);
+					node->right = nullptr;
+					prev = cur;
+					cur = cur->right;
+				}
+			}
 		}
-		return (int)res;
 	}
 };
+void destroy(TreeNode *root)
+{
+	if (root == nullptr)
+		return;
+	destroy(root->left);
+	destroy(root->right);
+	delete root;
+}
 int main(void)
 {
-	Solution test;
-	vector<vector<int>> a = { {0},{1},{0} };
-	cout << test.uniquePathsWithObstacles(a);
+	Solution5 test;
+	TreeNode *root = new TreeNode(1);
+	root->right = new TreeNode(2);
+	root->right->left = new TreeNode(3);
+	auto x = test.inorderTraversal(root);
+	for_each(x.begin(), x.end(), [](int y) {
+		cout << y << " ";
+	});
+	destroy(root);
 	cout << endl;
-	double x;
-	char s[11];
-	gets_s(s);
-	putchar()
+	
 	// code to keep window open for MSVC++
 	cin.clear();
 	while (cin.get() != '\n')
