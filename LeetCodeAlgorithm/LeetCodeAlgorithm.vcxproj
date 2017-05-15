@@ -176,6 +176,8 @@
     <ClCompile Include="..\SourceCode\91-Decode Ways.cpp" />
     <ClCompile Include="..\SourceCode\92-Reverse Linked List II.cpp" />
     <ClCompile Include="..\SourceCode\93-Restore IP Addresses.cpp" />
+    <ClCompile Include="..\SourceCode\94-Binary Tree Inorder Traversal.cpp" />
+    <ClCompile Include="..\SourceCode\96-Unique Binary Search Trees.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

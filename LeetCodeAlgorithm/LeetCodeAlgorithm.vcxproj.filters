@@ -264,5 +264,11 @@
     <ClCompile Include="..\SourceCode\93-Restore IP Addresses.cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="..\SourceCode\94-Binary Tree Inorder Traversal.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\96-Unique Binary Search Trees.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
