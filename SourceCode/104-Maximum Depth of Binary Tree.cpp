@@ -106,31 +106,31 @@ public:
 	}
 };
 
-int main(void)
-{
-	Solution3 test;
-	ManageTree manageTree;
-	TreeNode *root = new TreeNode(3);
-	root->left = new TreeNode(9);
-	root->right = new TreeNode(20);
-	root->left->left = new TreeNode(15);
-	root->left->right = new TreeNode(7);
-
-	cout << test.maxDepth(root) << endl;
-	manageTree.destroy(root);
-	root = new TreeNode(1);
-	root->left = new TreeNode(2);
-	root->right = new TreeNode(3);
-	root->left->left = new TreeNode(4);
-	root->right->right = new TreeNode(5);
-	cout << test.maxDepth(root);
-	cout << endl;
-	
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution3 test;
+//	ManageTree manageTree;
+//	TreeNode *root = new TreeNode(3);
+//	root->left = new TreeNode(9);
+//	root->right = new TreeNode(20);
+//	root->left->left = new TreeNode(15);
+//	root->left->right = new TreeNode(7);
+//
+//	cout << test.maxDepth(root) << endl;
+//	manageTree.destroy(root);
+//	root = new TreeNode(1);
+//	root->left = new TreeNode(2);
+//	root->right = new TreeNode(3);
+//	root->left->left = new TreeNode(4);
+//	root->right->right = new TreeNode(5);
+//	cout << test.maxDepth(root);
+//	cout << endl;
+//	
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}

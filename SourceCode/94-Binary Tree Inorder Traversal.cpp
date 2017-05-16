@@ -177,14 +177,18 @@ public:
 		return result;
 	}
 };
-void destroy(TreeNode *root)
+class ManageTree
 {
-	if (root == nullptr)
-		return;
-	destroy(root->left);
-	destroy(root->right);
-	delete root;
-}
+public:
+	void destroy(TreeNode *root)
+	{
+		if (root == nullptr)
+			return;
+		destroy(root->left);
+		destroy(root->right);
+		delete root;
+	}
+};
 //int main(void)
 //{
 //	Solution5 test;
@@ -195,7 +199,8 @@ void destroy(TreeNode *root)
 //	for_each(x.begin(), x.end(), [](int y) {
 //		cout << y << " ";
 //	});
-//	destroy(root);
+//	ManageTree manageTree;
+//	manageTree.destroy(root);
 //	cout << endl;
 //	
 //	// code to keep window open for MSVC++

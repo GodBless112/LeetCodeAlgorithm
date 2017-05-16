@@ -98,6 +98,10 @@
     <ClCompile Include="..\SourceCode\1-TwoSum.cpp" />
     <ClCompile Include="..\SourceCode\10-RegularExpressionMatching.cpp" />
     <ClCompile Include="..\SourceCode\100-Same Tree.cpp" />
+    <ClCompile Include="..\SourceCode\101-Symmetric Tree.cpp" />
+    <ClCompile Include="..\SourceCode\102-Binary Tree Level Order Traversal.cpp" />
+    <ClCompile Include="..\SourceCode\103-Binary Tree Zigzag Level Order Traversal.cpp" />
+    <ClCompile Include="..\SourceCode\104-Maximum Depth of Binary Tree.cpp" />
     <ClCompile Include="..\SourceCode\11-ContainerWithMostWater.cpp" />
     <ClCompile Include="..\SourceCode\12-IntegertoRoman.cpp" />
     <ClCompile Include="..\SourceCode\13-RomantoInteger.cpp" />
@@ -177,7 +181,9 @@
     <ClCompile Include="..\SourceCode\92-Reverse Linked List II.cpp" />
     <ClCompile Include="..\SourceCode\93-Restore IP Addresses.cpp" />
     <ClCompile Include="..\SourceCode\94-Binary Tree Inorder Traversal.cpp" />
+    <ClCompile Include="..\SourceCode\95-Unique Binary Search Trees II.cpp" />
     <ClCompile Include="..\SourceCode\96-Unique Binary Search Trees.cpp" />
+    <ClCompile Include="..\SourceCode\98-Validate Binary Search Tree.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
