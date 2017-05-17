@@ -1,8 +1,18 @@
-﻿//	104. Maximum Depth of Binary Tree
+﻿//	112. Path Sum
 //------------------------------------------------------------------------------//
-//	Given a binary tree, find its maximum depth.								//
-//	The maximum depth is the number of nodes along the longest path from the	//
-//	root node down to the farthest leaf node.		 							//
+//	Given a binary tree and a sum, determine if the tree has a root-to-leaf		//
+//	path such that adding up all the values along the path equals the given sum.//
+//	For example :																//
+//	Given the below binary tree and sum = 22,									//
+//			5																	//
+//		   / \																	//
+//		  4   8																	//
+//		 /	 / \																//
+//		11  13  4																//
+//	   / \		 \																//
+//	  7   2       1																//
+//	return true, as there exist a root - to - leaf path 5->4->11->2 which sum	//
+//	is 22.		 																//
 //------------------------------------------------------------------------------//
 #include <iostream>
 #include<vector>
@@ -10,8 +20,8 @@
 #include<numeric>
 #include<algorithm>
 #include<functional>
-#include<deque>
 #include<queue>
+#include<stack>
 // constants
 // function prototype
 using namespace std;
@@ -22,62 +32,33 @@ struct TreeNode {
 	TreeNode *right;
 	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-//递归的方法
+//利用一个bool变量记录该节点是否有兄弟节点
 class Solution 
 {
 public:
-	int maxDepth(TreeNode* root) 
+	bool hasPathSum(TreeNode* root, int sum)
 	{
-		int result = -1;
-		if (root == nullptr)
-			return 0;
-		maxDepth(root, 1, result);
-		return result;
+		if (root == nullptr) return false;
+		return DFS(root, sum, false);
 	}
-private:
-	void maxDepth(TreeNode* root, int cur, int &max)
+	bool DFS(TreeNode* root, int sum, bool hasBrother)
 	{
-		if (root == nullptr)
-			return;
-		if (cur >= max)
-			max = cur;
-		maxDepth(root->left, cur + 1, max);
-		maxDepth(root->right, cur + 1, max);
+		if (root == nullptr) 
+			return !hasBrother && sum == 0;
+		return DFS(root->left, sum - root->val, root->right)
+			|| DFS(root->right, sum - root->val, root->left);
 	}
 };
-//更简洁的递归方法
+//更直接的方式
 class Solution2
 {
 public:
-	int maxDepth(TreeNode* root)
-	{
-		if (root == nullptr) return 0;
-		return max(maxDepth(root->left), maxDepth(root->right)) + 1;
-	}
-};
-//迭代的方法
-class Solution3
-{
-public:
-	int maxDepth(TreeNode* root)
-	{
-		queue<TreeNode*> current, next;
-		int result = 0;
-		if (root == nullptr)
-			return 0;
-		else
-			current.push(root);
-		while (!current.empty()) {
-			while (!current.empty()) {
-				TreeNode* node = current.front();
-				current.pop();
-				if (node->left != nullptr) next.push(node->left);
-				if (node->right != nullptr) next.push(node->right);
-			}
-			result++;
-			swap(next, current);
-		}
-		return result;
+	bool hasPathSum(TreeNode *root, int sum) {
+		if (root == nullptr) return false;
+		if (root->left == nullptr && root->right == nullptr) // leaf
+			return sum == root->val;
+		return hasPathSum(root->left, sum - root->val)
+			|| hasPathSum(root->right, sum - root->val);
 	}
 };
 class ManageTree
@@ -108,22 +89,22 @@ public:
 
 int main(void)
 {
-	Solution3 test;
+	Solution2 test;
 	ManageTree manageTree;
 	TreeNode *root = new TreeNode(3);
 	root->left = new TreeNode(9);
 	root->right = new TreeNode(20);
 	root->left->left = new TreeNode(15);
-	root->left->right = new TreeNode(7);
-
-	cout << test.maxDepth(root) << endl;
+	root->left->left->left = new TreeNode(7);
+	
+	cout << boolalpha << test.hasPathSum(root, 27) << endl;
 	manageTree.destroy(root);
 	root = new TreeNode(1);
 	root->left = new TreeNode(2);
 	root->right = new TreeNode(3);
 	root->left->left = new TreeNode(4);
 	root->right->right = new TreeNode(5);
-	cout << test.maxDepth(root);
+	cout << boolalpha << test.hasPathSum(root, 7) << endl;
 	cout << endl;
 	
 	// code to keep window open for MSVC++

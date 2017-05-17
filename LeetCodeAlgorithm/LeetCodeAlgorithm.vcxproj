@@ -102,7 +102,11 @@
     <ClCompile Include="..\SourceCode\102-Binary Tree Level Order Traversal.cpp" />
     <ClCompile Include="..\SourceCode\103-Binary Tree Zigzag Level Order Traversal.cpp" />
     <ClCompile Include="..\SourceCode\104-Maximum Depth of Binary Tree.cpp" />
+    <ClCompile Include="..\SourceCode\107-Binary Tree Level Order Traversal II.cpp" />
+    <ClCompile Include="..\SourceCode\108-Convert Sorted Array to Binary Search Tree.cpp" />
     <ClCompile Include="..\SourceCode\11-ContainerWithMostWater.cpp" />
+    <ClCompile Include="..\SourceCode\110-Balanced Binary Tree.cpp" />
+    <ClCompile Include="..\SourceCode\111-Minimum Depth of Binary Tree.cpp" />
     <ClCompile Include="..\SourceCode\12-IntegertoRoman.cpp" />
     <ClCompile Include="..\SourceCode\13-RomantoInteger.cpp" />
     <ClCompile Include="..\SourceCode\14-LongestCommonPrefix.cpp" />
