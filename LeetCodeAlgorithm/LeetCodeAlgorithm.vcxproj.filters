@@ -300,5 +300,50 @@
     <ClCompile Include="..\SourceCode\111-Minimum Depth of Binary Tree.cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="..\SourceCode\112-Path Sum.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\118-Pascal%27s Triangle.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\119-Pascal%27s Triangle II.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\121-Best Time to Buy and Sell Stock.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\122-Best Time to Buy and Sell Stock II.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\125-Valid Palindrome.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\136-Single Number.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\141-Linked List Cycle.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\105-Construct Binary Tree from Preorder and Inorder Traversal.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\106-Construct Binary Tree from Inorder and Postorder Traversal.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\109-Convert Sorted List to Binary Search Tree.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\113-Path Sum II.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\114-Flatten Binary Tree to Linked List.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\116-Populating Next Right Pointers in Each Node.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\117-Populating Next Right Pointers in Each Node II.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
