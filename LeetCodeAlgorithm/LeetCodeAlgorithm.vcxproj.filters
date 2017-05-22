@@ -345,5 +345,17 @@
     <ClCompile Include="..\SourceCode\117-Populating Next Right Pointers in Each Node II.cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="..\SourceCode\120-Triangle.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\127-Word Ladder.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\129-Sum Root to Leaf Numbers.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\算法与数据结构\数据结构与算法分析-C++描述(第三版)\每章例程\第八章\8-5路径压缩t.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

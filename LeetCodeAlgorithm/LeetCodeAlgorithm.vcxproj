@@ -95,6 +95,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\算法与数据结构\数据结构与算法分析-C++描述(第三版)\每章例程\第八章\8-5路径压缩t.cpp" />
     <ClCompile Include="..\SourceCode\1-TwoSum.cpp" />
     <ClCompile Include="..\SourceCode\10-RegularExpressionMatching.cpp" />
     <ClCompile Include="..\SourceCode\100-Same Tree.cpp" />
@@ -118,9 +119,12 @@
     <ClCompile Include="..\SourceCode\118-Pascal%27s Triangle.cpp" />
     <ClCompile Include="..\SourceCode\119-Pascal%27s Triangle II.cpp" />
     <ClCompile Include="..\SourceCode\12-IntegertoRoman.cpp" />
+    <ClCompile Include="..\SourceCode\120-Triangle.cpp" />
     <ClCompile Include="..\SourceCode\121-Best Time to Buy and Sell Stock.cpp" />
     <ClCompile Include="..\SourceCode\122-Best Time to Buy and Sell Stock II.cpp" />
     <ClCompile Include="..\SourceCode\125-Valid Palindrome.cpp" />
+    <ClCompile Include="..\SourceCode\127-Word Ladder.cpp" />
+    <ClCompile Include="..\SourceCode\129-Sum Root to Leaf Numbers.cpp" />
     <ClCompile Include="..\SourceCode\13-RomantoInteger.cpp" />
     <ClCompile Include="..\SourceCode\136-Single Number.cpp" />
     <ClCompile Include="..\SourceCode\14-LongestCommonPrefix.cpp" />
