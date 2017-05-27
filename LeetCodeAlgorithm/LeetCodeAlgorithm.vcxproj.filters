@@ -354,7 +354,37 @@
     <ClCompile Include="..\SourceCode\129-Sum Root to Leaf Numbers.cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\算法与数据结构\数据结构与算法分析-C++描述(第三版)\每章例程\第八章\8-5路径压缩t.cpp">
+    <ClCompile Include="..\SourceCode\130-Surrounded Regions.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\131-Palindrome Partitioning.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\133-Clone Graph.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\134-Gas Station.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\137-Single Number II.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\138-Copy List with Random Pointer.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\139-Word Break.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\142-Linked List Cycle II.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\143-Reorder List.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\144-Binary Tree Preorder Traversal.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\145-Binary Tree Postorder Traversal.cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
   </ItemGroup>

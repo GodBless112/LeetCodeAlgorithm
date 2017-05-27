@@ -95,7 +95,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\算法与数据结构\数据结构与算法分析-C++描述(第三版)\每章例程\第八章\8-5路径压缩t.cpp" />
     <ClCompile Include="..\SourceCode\1-TwoSum.cpp" />
     <ClCompile Include="..\SourceCode\10-RegularExpressionMatching.cpp" />
     <ClCompile Include="..\SourceCode\100-Same Tree.cpp" />
@@ -126,9 +125,20 @@
     <ClCompile Include="..\SourceCode\127-Word Ladder.cpp" />
     <ClCompile Include="..\SourceCode\129-Sum Root to Leaf Numbers.cpp" />
     <ClCompile Include="..\SourceCode\13-RomantoInteger.cpp" />
+    <ClCompile Include="..\SourceCode\130-Surrounded Regions.cpp" />
+    <ClCompile Include="..\SourceCode\131-Palindrome Partitioning.cpp" />
+    <ClCompile Include="..\SourceCode\133-Clone Graph.cpp" />
+    <ClCompile Include="..\SourceCode\134-Gas Station.cpp" />
     <ClCompile Include="..\SourceCode\136-Single Number.cpp" />
+    <ClCompile Include="..\SourceCode\137-Single Number II.cpp" />
+    <ClCompile Include="..\SourceCode\138-Copy List with Random Pointer.cpp" />
+    <ClCompile Include="..\SourceCode\139-Word Break.cpp" />
     <ClCompile Include="..\SourceCode\14-LongestCommonPrefix.cpp" />
     <ClCompile Include="..\SourceCode\141-Linked List Cycle.cpp" />
+    <ClCompile Include="..\SourceCode\142-Linked List Cycle II.cpp" />
+    <ClCompile Include="..\SourceCode\143-Reorder List.cpp" />
+    <ClCompile Include="..\SourceCode\144-Binary Tree Preorder Traversal.cpp" />
+    <ClCompile Include="..\SourceCode\145-Binary Tree Postorder Traversal.cpp" />
     <ClCompile Include="..\SourceCode\15-3Sum.cpp" />
     <ClCompile Include="..\SourceCode\16-3SumClosest.cpp" />
     <ClCompile Include="..\SourceCode\17-LetterCombinationsofaPhoneNumber.cpp" />
