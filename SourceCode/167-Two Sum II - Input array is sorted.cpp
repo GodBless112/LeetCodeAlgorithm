@@ -75,19 +75,19 @@ public:
 		return -1;
 	}
 };
-int main(void)
-{
-	Solution3 test;
-	vector<int> numbers{ 2, 7, 11, 15 };
-	auto res = test.twoSum(numbers, 9);
-	cout << res[0] << " " << res[1] << endl;
-	cout << endl;
-		
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-	
-	return 0;
-}
+//int main(void)
+//{
+//	Solution3 test;
+//	vector<int> numbers{ 2, 7, 11, 15 };
+//	auto res = test.twoSum(numbers, 9);
+//	cout << res[0] << " " << res[1] << endl;
+//	cout << endl;
+//		
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//	
+//	return 0;
+//}

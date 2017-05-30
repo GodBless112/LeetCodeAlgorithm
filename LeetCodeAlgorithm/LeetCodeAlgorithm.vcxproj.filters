@@ -387,5 +387,23 @@
     <ClCompile Include="..\SourceCode\145-Binary Tree Postorder Traversal.cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="..\SourceCode\147-Insertion Sort List.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\148-Sort List.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\150-Evaluate Reverse Polish Notation.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\155-Min Stack.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\160-Intersection of Two Linked Lists.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\167-Two Sum II - Input array is sorted.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -139,8 +139,14 @@
     <ClCompile Include="..\SourceCode\143-Reorder List.cpp" />
     <ClCompile Include="..\SourceCode\144-Binary Tree Preorder Traversal.cpp" />
     <ClCompile Include="..\SourceCode\145-Binary Tree Postorder Traversal.cpp" />
+    <ClCompile Include="..\SourceCode\147-Insertion Sort List.cpp" />
+    <ClCompile Include="..\SourceCode\148-Sort List.cpp" />
     <ClCompile Include="..\SourceCode\15-3Sum.cpp" />
+    <ClCompile Include="..\SourceCode\150-Evaluate Reverse Polish Notation.cpp" />
+    <ClCompile Include="..\SourceCode\155-Min Stack.cpp" />
     <ClCompile Include="..\SourceCode\16-3SumClosest.cpp" />
+    <ClCompile Include="..\SourceCode\160-Intersection of Two Linked Lists.cpp" />
+    <ClCompile Include="..\SourceCode\167-Two Sum II - Input array is sorted.cpp" />
     <ClCompile Include="..\SourceCode\17-LetterCombinationsofaPhoneNumber.cpp" />
     <ClCompile Include="..\SourceCode\18-4Sum.cpp" />
     <ClCompile Include="..\SourceCode\19-RemoveNthNodeFromEndofList.cpp" />
