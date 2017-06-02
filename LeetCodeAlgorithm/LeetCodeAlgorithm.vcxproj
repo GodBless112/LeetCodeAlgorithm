@@ -147,7 +147,11 @@
     <ClCompile Include="..\SourceCode\16-3SumClosest.cpp" />
     <ClCompile Include="..\SourceCode\160-Intersection of Two Linked Lists.cpp" />
     <ClCompile Include="..\SourceCode\167-Two Sum II - Input array is sorted.cpp" />
+    <ClCompile Include="..\SourceCode\168-Excel Sheet Column Title.cpp" />
+    <ClCompile Include="..\SourceCode\169-Majority Element.cpp" />
     <ClCompile Include="..\SourceCode\17-LetterCombinationsofaPhoneNumber.cpp" />
+    <ClCompile Include="..\SourceCode\171-Excel Sheet Column Number.cpp" />
+    <ClCompile Include="..\SourceCode\172-Factorial Trailing Zeroes.cpp" />
     <ClCompile Include="..\SourceCode\18-4Sum.cpp" />
     <ClCompile Include="..\SourceCode\19-RemoveNthNodeFromEndofList.cpp" />
     <ClCompile Include="..\SourceCode\2-Add Two Numbers.cpp" />
