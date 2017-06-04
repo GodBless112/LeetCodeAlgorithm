@@ -153,7 +153,10 @@
     <ClCompile Include="..\SourceCode\171-Excel Sheet Column Number.cpp" />
     <ClCompile Include="..\SourceCode\172-Factorial Trailing Zeroes.cpp" />
     <ClCompile Include="..\SourceCode\18-4Sum.cpp" />
+    <ClCompile Include="..\SourceCode\189-Rotate Array.cpp" />
     <ClCompile Include="..\SourceCode\19-RemoveNthNodeFromEndofList.cpp" />
+    <ClCompile Include="..\SourceCode\190-Reverse Bits.cpp" />
+    <ClCompile Include="..\SourceCode\191-Number of 1 Bits.cpp" />
     <ClCompile Include="..\SourceCode\2-Add Two Numbers.cpp" />
     <ClCompile Include="..\SourceCode\20-ValidParentheses.cpp" />
     <ClCompile Include="..\SourceCode\206-Reverse Linked List.cpp" />
