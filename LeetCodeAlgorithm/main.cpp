@@ -1,13 +1,17 @@
-﻿//	198. House Robber
+﻿//	165. Compare Version Numbers
 //------------------------------------------------------------------------------//
-//	You are a professional robber planning to rob houses along a street. Each	//
-//	house has a certain amount of money stashed, the only constraint stopping	//
-//	you from robbing each of them is that adjacent houses have security system	//
-//	connected and it will automatically contact the police if two adjacent		//
-//	houses were broken into on the same night.									//
-//	Given a list of non - negative integers representing the amount of money of //
-//	each house, determine the maximum amount of money you can rob tonight		//
-//	without alerting the police. 												//
+//	Compare two version numbers version1 and version2.							//
+//	If version1 > version2 return 1, if version1 < version2 return -1, otherwise//
+//	return 0.																	//
+//	You may assume that the version strings are non - empty and contain only	//
+//	digits and the.character.													//
+//	The.character does not represent a decimal point and is used to separate	//
+//	number sequences.															//
+//	For instance, 2.5 is not "two and a half" or "half way to version three",	//
+//	it is the fifth second - level revision of the second first - level			//
+//	revision.																	//
+//	Here is an example of version numbers ordering :							//
+//	0.1 < 1.1 < 1.2 < 13.37														//
 //------------------------------------------------------------------------------//
 #include <iostream>
 #include<vector>
@@ -15,30 +19,32 @@
 #include<numeric>
 #include<algorithm>
 #include<functional>
-
+#include<sstream>
 // constants
 // function prototype
 using namespace std;
-//动态规划，从奇数出发和从偶数出发两个状态
-//对于奇数位只能是上次在奇数位抢到的加上本次的或者偶数位抢到的，这次不抢，偶数位同理
 class Solution {
 public:
-	int rob(vector<int>& nums) {
+	int compareVersion(string version1, string version2) {
+		istringstream ss1(version1), ss2(version2);
 		int a = 0, b = 0;
-		for (int i = 0; i < nums.size(); ++i) {
-			if (i % 2)
-				a = max(b, a + nums[i]);
-			else
-				b = max(a, b + nums[i]);
+		while (ss1 >> a && ss2 >> b) {
+			if (a > b) return 1;
+			else if (a < b) return -1;
+			ss1.get();
+			ss2.get();
+			a = b = 0;
 		}
-		return max(a, b);
+		if (a > b) return 1;
+		if (a < b) return -1;
+		if (ss1.eof() && ss2.eof()) return 0;
 	}
 };
 int main(void)
 {
 	Solution test;
-	vector<int> nums{ 1,3,4,5,6 };
-	cout << test.rob(nums);
+	cout << test.compareVersion("1", "1.1");
+	cout << endl;
 	// code to keep window open for MSVC++
 	cin.clear();
 	while (cin.get() != '\n')
