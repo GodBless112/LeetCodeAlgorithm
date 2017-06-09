@@ -459,5 +459,26 @@
     <ClCompile Include="..\SourceCode\164-Maximum Gap.cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="..\SourceCode\165-Compare Version Numbers.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\166-Fraction to Recurring Decimal.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\173-Binary Search Tree Iterator.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\179-Largest Number.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\187-Repeated DNA Sequences.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\199-Binary Tree Right Side View.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\200-Number of Islands.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
