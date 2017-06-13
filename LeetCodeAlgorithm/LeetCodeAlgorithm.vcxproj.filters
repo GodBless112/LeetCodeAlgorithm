@@ -480,5 +480,29 @@
     <ClCompile Include="..\SourceCode\200-Number of Islands.cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="..\SourceCode\201-Bitwise AND of Numbers Range.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\207-Course Schedule.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\208-Implement Trie (Prefix Tree).cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\209-Minimum Size Subarray Sum.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\210-Course Schedule II.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\211-Add and Search Word - Data structure design.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\212-Word Search II.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\213-House Robber II.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
