@@ -187,7 +187,16 @@
     <ClCompile Include="..\SourceCode\211-Add and Search Word - Data structure design.cpp" />
     <ClCompile Include="..\SourceCode\212-Word Search II.cpp" />
     <ClCompile Include="..\SourceCode\213-House Robber II.cpp" />
+    <ClCompile Include="..\SourceCode\215-Kth Largest Element in an Array.cpp" />
+    <ClCompile Include="..\SourceCode\216-Combination Sum III.cpp" />
+    <ClCompile Include="..\SourceCode\217-Contains Duplicate.cpp" />
+    <ClCompile Include="..\SourceCode\219-Contains Duplicate II.cpp" />
     <ClCompile Include="..\SourceCode\22-Generate Parentheses.cpp" />
+    <ClCompile Include="..\SourceCode\225-Implement Stack using Queues.cpp" />
+    <ClCompile Include="..\SourceCode\226-Invert Binary Tree.cpp" />
+    <ClCompile Include="..\SourceCode\231-Power of Two.cpp" />
+    <ClCompile Include="..\SourceCode\232-Implement Queue using Stacks.cpp" />
+    <ClCompile Include="..\SourceCode\234-Palindrome Linked List.cpp" />
     <ClCompile Include="..\SourceCode\24-Swap Nodes in Pairs.cpp" />
     <ClCompile Include="..\SourceCode\26-RemoveDuplicatesfromSortedArray.cpp" />
     <ClCompile Include="..\SourceCode\27-RemoveElement.cpp" />

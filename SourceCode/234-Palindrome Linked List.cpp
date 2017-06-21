@@ -88,23 +88,23 @@ public:
 		}
 	}
 };
-int main(void)
-{
-	Solution2 test;
-	ManageListNode ml;
-	ListNode *root = new ListNode(1);
-	root->next = new ListNode(2);
-	root->next->next = new ListNode(2);
-	root->next->next->next = new ListNode(1);
-	ml.showList(root);
-	cout << boolalpha << test.isPalindrome(root);
-	ml.deleteList(root);
-	cout << endl;
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution2 test;
+//	ManageListNode ml;
+//	ListNode *root = new ListNode(1);
+//	root->next = new ListNode(2);
+//	root->next->next = new ListNode(2);
+//	root->next->next->next = new ListNode(1);
+//	ml.showList(root);
+//	cout << boolalpha << test.isPalindrome(root);
+//	ml.deleteList(root);
+//	cout << endl;
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}
