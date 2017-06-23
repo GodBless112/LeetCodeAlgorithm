@@ -55,7 +55,7 @@ private:
 		return prev;
 	}
 };
-//递归的方法
+//递归的方法，有点巧妙
 class Solution2 {
 public:
 	ListNode* temp;

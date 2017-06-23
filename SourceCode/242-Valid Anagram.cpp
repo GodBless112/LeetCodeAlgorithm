@@ -61,16 +61,16 @@ public:
 		return true;
 	}
 };
-int main(void)
-{
-	Solution3 test;
-	cout << boolalpha << test.isAnagram("ang", "gan");
-	cout << endl;
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution3 test;
+//	cout << boolalpha << test.isAnagram("ang", "gan");
+//	cout << endl;
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}

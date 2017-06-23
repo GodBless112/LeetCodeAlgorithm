@@ -197,7 +197,10 @@
     <ClCompile Include="..\SourceCode\231-Power of Two.cpp" />
     <ClCompile Include="..\SourceCode\232-Implement Queue using Stacks.cpp" />
     <ClCompile Include="..\SourceCode\234-Palindrome Linked List.cpp" />
+    <ClCompile Include="..\SourceCode\235-Lowest Common Ancestor of a Binary Search Tree.cpp" />
+    <ClCompile Include="..\SourceCode\237-Delete Node in a Linked List.cpp" />
     <ClCompile Include="..\SourceCode\24-Swap Nodes in Pairs.cpp" />
+    <ClCompile Include="..\SourceCode\242-Valid Anagram.cpp" />
     <ClCompile Include="..\SourceCode\26-RemoveDuplicatesfromSortedArray.cpp" />
     <ClCompile Include="..\SourceCode\27-RemoveElement.cpp" />
     <ClCompile Include="..\SourceCode\28-Implement strStr().cpp" />

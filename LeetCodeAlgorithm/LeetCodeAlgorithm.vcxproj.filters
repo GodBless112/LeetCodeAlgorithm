@@ -531,5 +531,14 @@
     <ClCompile Include="..\SourceCode\234-Palindrome Linked List.cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="..\SourceCode\235-Lowest Common Ancestor of a Binary Search Tree.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\237-Delete Node in a Linked List.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\242-Valid Anagram.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
