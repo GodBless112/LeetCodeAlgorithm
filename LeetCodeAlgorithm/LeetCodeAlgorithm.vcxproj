@@ -192,6 +192,7 @@
     <ClCompile Include="..\SourceCode\217-Contains Duplicate.cpp" />
     <ClCompile Include="..\SourceCode\219-Contains Duplicate II.cpp" />
     <ClCompile Include="..\SourceCode\22-Generate Parentheses.cpp" />
+    <ClCompile Include="..\SourceCode\220-Contains Duplicate III.cpp" />
     <ClCompile Include="..\SourceCode\225-Implement Stack using Queues.cpp" />
     <ClCompile Include="..\SourceCode\226-Invert Binary Tree.cpp" />
     <ClCompile Include="..\SourceCode\231-Power of Two.cpp" />

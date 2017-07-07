@@ -95,17 +95,17 @@ public:
 		return false;
 	}
 };
-int main(void)
-{
-	Solution test;
-	vector<int> nums{ INT_MIN,-2147483647 };
-	cout << boolalpha << test.containsNearbyAlmostDuplicate(nums, 3, 3);
-	cout << endl;
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	Solution test;
+//	vector<int> nums{ INT_MIN,-2147483647 };
+//	cout << boolalpha << test.containsNearbyAlmostDuplicate(nums, 3, 3);
+//	cout << endl;
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}

@@ -540,5 +540,8 @@
     <ClCompile Include="..\SourceCode\242-Valid Anagram.cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="..\SourceCode\220-Contains Duplicate III.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
