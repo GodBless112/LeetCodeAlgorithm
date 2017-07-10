@@ -1,9 +1,14 @@
-﻿//	220. Contains Duplicate III
+﻿//	227. Basic Calculator II
 //------------------------------------------------------------------------------//
-//	Given an array of integers, find out whether there are two distinct indices //
-//	i and j in the array such that the absolute difference between nums[i] and	//
-//	nums[j] is at most t and the absolute difference between i and j is at most //
-//	k.																			//
+//	Implement a basic calculator to evaluate a simple expression string.		//
+//	The expression string contains only non - negative integers, +, -, *, /		//
+//	operators and empty spaces.The integer division should truncate toward zero.//
+//	You may assume that the given expression is always valid.					//
+//	Some examples :																//
+//	"3+2*2" = 7																	//
+//	" 3/2 " = 1																	//
+//	" 3+5 / 2 " = 5																//
+//	Note : Do not use the eval built - in library function.						//
 //------------------------------------------------------------------------------//
 #include <iostream>
 #include<vector>
@@ -11,95 +16,112 @@
 #include<numeric>
 #include<algorithm>
 #include<functional>
-#include<set>
-#include<map>
-#include<unordered_map>
+#include<sstream>
+#include<stack>
+#include<unordered_set>
 // constants
 // function prototype
 using namespace std;
-//利用set的排序性，维持k个窗，利用lower_bound寻找边界|x-nums[i]|<=t,-t<=x-nums[i]<=t
-//只要找到x>=nums[i]-t的下界即可
+//先转化为逆波兰记法，然后利用栈计算
 class Solution {
 public:
-	bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {
-		set<long long> dict;
-		if (k <= 0 || t < 0) return false;
-		for (int i = 0; i < nums.size(); ++i) {
-			if (i > k) dict.erase(nums[i - k - 1]);
-			auto pos = dict.lower_bound((long long)nums[i] - t);
-			if (pos != dict.end() && (long long)*pos - nums[i] <= t)
-				return true;
-			dict.insert(nums[i]);
+	int calculate(string s) {
+		stack<char> stack;
+		string polish;
+		vector<string> tokens;
+		for (int i = 0; i <= s.size(); ++i) {
+			if (s[i] >= '0' &&s[i] <= '9')
+				polish += s[i];
+			else {
+				if(!polish.empty())
+					tokens.push_back(polish);
+				polish = "";
+				if (s[i] == '+' || s[i] == '-') {
+					while (!stack.empty()) {
+						tokens.push_back(string(1, stack.top()));
+						stack.pop();
+					}
+					stack.push(s[i]);
+				}				
+				else if (s[i] == '*' || s[i] == '/') {
+					while (!stack.empty()) {
+						if (stack.top() == '+' || stack.top() == '-')
+							break;
+						tokens.push_back(string(1, stack.top()));
+						stack.pop();
+					}
+					stack.push(s[i]);
+				}
+			}
 		}
-		return false;
+		while (!stack.empty()) {
+			tokens.push_back(string(1, stack.top()));
+			stack.pop();
+		}
+		return evalRPN(tokens);
+	}
+private:
+	int evalRPN(vector<string>& tokens) {
+		stack<int> s;
+		for (int i = 0; i < tokens.size(); ++i) {
+			if (dict.find(tokens[i]) != dict.end()) {
+				int val1 = s.top();
+				s.pop();
+				int val2 = s.top();
+				s.pop();
+				int val = calulate(val2, val1, tokens[i]);
+				s.push(val);
+			}
+			else
+				s.push(stoi(tokens[i]));
+		}
+		return s.top();
+	}
+	unordered_set<string> dict{ "+","-","/","*" };
+	int calulate(int val1, int val2, string &s) {
+		switch (s[0])
+		{
+		case '+': return val1 + val2;
+		case '-': return val1 - val2;
+		case '/': return val1 / val2;
+		case '*': return val1 * val2;
+		}
 	}
 };
-//map
+//
 class Solution2 {
 public:
-	bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {
-		map<long long, int> M;
-		int l = 0;
-		for (int r = 0; r<nums.size(); r++) {
-			if (r - l>k && M[nums[l]] == l)
-				M.erase(nums[l++]);
-			auto it = M.lower_bound((long long)nums[r] - t);
-			if (it != M.end() && abs((long long)it->first - nums[r]) <= t)
-				return true;
-			M[nums[r]] = r;
-		}
-		return false;
-	}
-};
-//桶排序
-class Solution {
-	long long getBucketId(long long i, long long w) {
-		return i < 0 ? (i + 1) / w - 1 : i / w;
-	}
-public:
-	bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {
-		int n = nums.size();
-		if (n < 2 || k < 1 || t < 0)
-		{
-			return false;
-		}
-
-		unordered_map<long long, long long> buckets;
-		long long width = (long long)t + 1;
-		for (int i = 0; i < n; i++)
-		{
-			long long id = getBucketId(nums[i], width);
-
-			// found the value in the same bucket
-			if (buckets.find(id) != buckets.end())
-			{
-				return true;
+	int calculate(string s) {
+		long long total = 0, terms = 0, n;
+		char op;
+		istringstream in('+' + s + '+');
+		while (in >> op) {
+			if (op == '+' || op == '-') {
+				total += terms;
+				in >> terms;
+				terms *= 44 - op;
 			}
-
-			// found the value in the adjacent bucket
-			if ((buckets.find(id - 1) != buckets.end() && nums[i] - buckets[id - 1] < width) ||
-				(buckets.find(id + 1) != buckets.end() && buckets[id + 1] - nums[i] < width))
-			{
-				return true;
-			}
-
-			// insert current value to buckets
-			buckets[id] = nums[i];
-
-			if (i >= k)    // remove out of range element
-			{
-				buckets.erase(getBucketId(nums[i - k], width));
+			else {
+				in >> n;
+				if (op == '*')
+					terms *= n;
+				else
+					terms /= n;
 			}
 		}
-
-		return false;
+		return total;
 	}
 };
 int main(void)
 {
-	Solution test;
-	vector<int> nums{ INT_MIN,-2147483647 };
-	cout << boolalpha << test.containsNearbyAlmostDuplicate(nums, 3, 3);
+	Solution2 test;
+	string input;
+	cout << "请输入计算式:\n";
+	while (getline(cin, input)) {
+		cout << test.calculate(input) << endl;
+		cout << "请输入计算式:\n";
+	}
+	
 	cout << endl;
 	// code to keep window open for MSVC++
 	cin.clear();

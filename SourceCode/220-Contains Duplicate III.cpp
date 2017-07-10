@@ -52,7 +52,7 @@ public:
 	}
 };
 //桶排序
-class Solution {
+class Solution3 {
 	long long getBucketId(long long i, long long w) {
 		return i < 0 ? (i + 1) / w - 1 : i / w;
 	}
