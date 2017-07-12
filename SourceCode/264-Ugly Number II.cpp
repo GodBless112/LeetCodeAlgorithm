@@ -72,19 +72,34 @@ public:
 		return ugly[n - 1];
 	}
 };
-int main(void)
-{
-	Solution test;
-	cout << 10 << " " << test.nthUglyNumber(10) << endl;
-	for (int i = 0; i < 20; i++)
-		cout << i << " " << test.nthUglyNumber(i) << endl;
-	cout << endl;
-
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+class Solution4 {
+public:
+	int nthUglyNumber(int n) {
+		static vector<int> ugly;
+		long long a, b, c, m = INT_MAX;
+		if (ugly.empty()) {
+			for (a = 1; a <= m; a *= 2)
+				for (b = a; b <= m; b *= 3)
+					for (c = b; c <= m; c *= 5)
+						ugly.push_back(c);
+			sort(begin(ugly), end(ugly));
+		}
+		return ugly[n - 1];
+	}
+};
+//int main(void)
+//{
+//	Solution test;
+//	cout << 10 << " " << test.nthUglyNumber(10) << endl;
+//	for (int i = 0; i < 20; i++)
+//		cout << i << " " << test.nthUglyNumber(i) << endl;
+//	cout << endl;
+//
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}
