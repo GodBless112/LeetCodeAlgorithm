@@ -591,5 +591,50 @@
     <ClCompile Include="..\SourceCode\264-Ugly Number II.cpp">
       <Filter>LeetCode</Filter>
     </ClCompile>
+    <ClCompile Include="..\SourceCode\268-Missing Number.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\278-First Bad Version.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\283-Move Zeroes.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\290-Word Pattern.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\292-Nim Game.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\303-Range Sum Query - Immutable.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\326-Power of Three.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\342-Power of Four.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\344-Reverse String.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\345-Reverse Vowels of a String.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\349-Intersection of Two Arrays.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\350-Intersection of Two Arrays II.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\367-Valid Perfect Square.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\371-Sum of Two Integers.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SourceCode\374-Guess Number Higher or Lower.cpp">
+      <Filter>LeetCode</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
