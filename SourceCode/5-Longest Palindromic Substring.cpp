@@ -118,7 +118,8 @@ private:
 		else return cache[key] = longestPalindrome(first, last);
 	}
 };
-//动态规划，O(n2)
+//动态规划，O(n2),用f(j,i)表示从j到i的字符串是否是回文。
+//状态转移方程可以表示为：f(j,i)=s[j] == s[i] && (i - j < 2 || f[(j + 1), i - 1])
 class Solution3
 {
 public:
