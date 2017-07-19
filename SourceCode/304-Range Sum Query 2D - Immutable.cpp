@@ -109,24 +109,24 @@ private:
 * NumMatrix obj = new NumMatrix(matrix);
 * int param_1 = obj.sumRegion(row1,col1,row2,col2);
 */
-int main(void)
-{
-	vector<vector<int>> matrix{ {3, 0, 1, 4, 2},
-								{5, 6, 3, 2, 1},
-								{1, 2, 0, 1, 5},
-								{4, 1, 0, 1, 7},
-								{1, 0, 3, 0, 5} };
-	NumMatrix2 test(matrix);
-	cout << test.sumRegion(0, 1, 4, 3) << endl;
-	cout << test.sumRegion(1, 1, 2, 2) << endl;
-	cout << test.sumRegion(1, 2, 2, 4) << endl;
-	cout << endl;
-
-	// code to keep window open for MSVC++
-	cin.clear();
-	while (cin.get() != '\n')
-		continue;
-	cin.get();
-
-	return 0;
-}
+//int main(void)
+//{
+//	vector<vector<int>> matrix{ {3, 0, 1, 4, 2},
+//								{5, 6, 3, 2, 1},
+//								{1, 2, 0, 1, 5},
+//								{4, 1, 0, 1, 7},
+//								{1, 0, 3, 0, 5} };
+//	NumMatrix2 test(matrix);
+//	cout << test.sumRegion(0, 1, 4, 3) << endl;
+//	cout << test.sumRegion(1, 1, 2, 2) << endl;
+//	cout << test.sumRegion(1, 2, 2, 4) << endl;
+//	cout << endl;
+//
+//	// code to keep window open for MSVC++
+//	cin.clear();
+//	while (cin.get() != '\n')
+//		continue;
+//	cin.get();
+//
+//	return 0;
+//}
